@@ -1,0 +1,50 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px; /* Ajuste a altura conforme necessário */
+    background-color: brown;
+    color: white;
+    gap: 15px;
+    font-size: 80%;
+}
+
+header h1 {
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60vh; /* Ajuste a altura conforme necessário */
+}
+
+main h3, main input, main select{
+    width: 35%; /* Ajuste a largura conforme necessário */
+    text-align: left;
+    margin-bottom: 8px;
+}
+
+main input, main select{
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: solid 0.5px;
+    height: 35px;
+}
+
+main button {
+    margin-left: -28.6%;
+    height: 40px;
+    width: 120px;
+    border: none;
+    border-radius: 5px;
+    background-color: brown;
+    color: white;
+}
