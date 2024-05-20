@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <title>Mini Rede Social</title>
 </head>
 <body>
@@ -13,16 +15,22 @@
         <h1>Mini Rede Social</h1>
     </header>
     <main>
-        <h3>Digite seu post:</h3>
+        <h3><span class="material-icons">edit</span> Digite seu post:</h3>
         <input type="text" placeholder="O que você está pensando hoje?">
-        <h3>Categoria:</h3>
-        <input type="text" placeholder="O que você está pensando hoje?">
-        <h3>Insira uma iamgem (URL):</h3>
-        <input type="text" placeholder="O que você está pensando hoje?">
-        <h3>Insira uma iamgem (URL):</h3>
-        <input type="text" placeholder="O que você está pensando hoje?">
-        <h3>Insira uma iamgem (URL):</h3>
-        <input type="text" placeholder="O que você está pensando hoje?">
+        <h3><span class="material-icons">list</span> Categoria:</h3>
+        <select name="categorias" id="categorias">
+            <option value="todos">Todos</option>
+            <option value="tecnologia">Tecnologia</option>
+            <option value="esportes">Esportes</option>
+            <option value="musica">Música</option>
+            <option value="filmes">Filmes</option>
+        </select>
+        <h3><span class="material-icons">image</span> Insira uma iamgem (URL):</h3>
+        <input type="url" placeholder="Insira a url aqui">
+        <h3><span class="material-icons">image</span> Insira uma iamgem (URL):</h3>
+        <input type="url" placeholder="Insira a url aqui">
+        <h3><span class="material-icons">image</span> Insira uma iamgem (URL):</h3>
+        <input type="url" placeholder="Insira a url aqui">
         <button>Postar</button>
     </main>
 
