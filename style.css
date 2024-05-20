@@ -18,7 +18,7 @@ header h1 {
     text-align: center;
 }
 
-main {
+form {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -26,20 +26,20 @@ main {
     height: 60vh; /* Ajuste a altura conforme necessário */
 }
 
-main h3, main input, main select{
+form h3, form input, form select{
     width: 35%; /* Ajuste a largura conforme necessário */
     text-align: left;
     margin-bottom: 8px;
 }
 
-main input, main select{
+form input, form select{
     margin-bottom: 20px;
     border-radius: 5px;
     border: solid 0.5px;
     height: 35px;
 }
 
-main button {
+main button{
     margin-left: -28.6%;
     height: 40px;
     width: 120px;
@@ -47,4 +47,22 @@ main button {
     border-radius: 5px;
     background-color: brown;
     color: white;
+}
+
+.filtro-posts{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 10vh; /* Altura total da viewport */
+}
+.filtro-posts select{
+    border: solid 0.5px;
+    border-radius: 5px;
+    margin-top: 8px;
+    height: 40px;
+    width: 120px;
+    background-color: white;
+    text-align: center;
+    font-size: 16px;
 }

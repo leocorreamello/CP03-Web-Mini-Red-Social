@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <title>Mini Rede Social</title>
 </head>
 <body>
@@ -15,23 +15,33 @@
         <h1>Mini Rede Social</h1>
     </header>
     <main>
-        <h3><span class="material-icons">edit</span> Digite seu post:</h3>
-        <input type="text" placeholder="O que você está pensando hoje?">
-        <h3><span class="material-icons">list</span> Categoria:</h3>
-        <select name="categorias" id="categorias">
-            <option value="todos">Todos</option>
-            <option value="tecnologia">Tecnologia</option>
-            <option value="esportes">Esportes</option>
-            <option value="musica">Música</option>
-            <option value="filmes">Filmes</option>
-        </select>
-        <h3><span class="material-icons">image</span> Insira uma iamgem (URL):</h3>
-        <input type="url" placeholder="Insira a url aqui">
-        <h3><span class="material-icons">image</span> Insira uma iamgem (URL):</h3>
-        <input type="url" placeholder="Insira a url aqui">
-        <h3><span class="material-icons">image</span> Insira uma iamgem (URL):</h3>
-        <input type="url" placeholder="Insira a url aqui">
-        <button>Postar</button>
+        <form>
+            <h3><span class="material-icons">edit</span> Digite seu post:</h3>
+            <input type="text" placeholder="O que você está pensando hoje?">
+            <h3><span class="material-icons">list</span> Categoria:</h3>
+            <select name="categorias" id="categorias">
+                <option value="todos">Todos</option>
+                <option value="tecnologia">Notícias</option>
+                <option value="esportes">Dicas</option>
+                <option value="musica">Eventos</option>
+            </select>
+            <h3><span class="material-icons">image</span> Insira uma iamgem (URL):</h3>
+            <input type="url" placeholder="Insira a url aqui">
+            <h3><span class="material-icons">image</span> Insira uma iamgem (URL):</h3>
+            <input type="url" placeholder="Insira a url aqui">
+            <h3><span class="material-icons">image</span> Insira uma iamgem (URL):</h3>
+            <input type="url" placeholder="Insira a url aqui">
+            <button style="font-size: 18px;"><span class="material-symbols-outlined">campaign</span> Postar</button>
+        </form>
+        <div class="filtro-posts">
+            <h3>Filtrar por categoria:</h3>
+            <select name="options" id="options">
+                <option value="option1">Todos</option>
+                <option value="option2">Notícias</option>
+                <option value="option3">Dicas</option>
+                <option value="option3">Eventos</option>
+            </select>
+        </div>
     </main>
 
     <script src="script.js"></script>
