@@ -3,7 +3,7 @@
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
-header {
+header{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,16 +14,16 @@ header {
     font-size: 80%;
 }
 
-header h1 {
+header h1{
     text-align: center;
 }
 
-form {
+form{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 60vh; /* Ajuste a altura conforme necessário */
+    height: 75vh; /* Ajuste a altura conforme necessário */
 }
 
 form h3, form input, form select{
@@ -56,6 +56,7 @@ main button{
     align-items: center;
     height: 10vh; /* Altura total da viewport */
 }
+
 .filtro-posts select{
     border: solid 0.5px;
     border-radius: 5px;
@@ -64,5 +65,35 @@ main button{
     width: 120px;
     background-color: white;
     text-align: center;
-    font-size: 16px;
+    font-size: 20px;
+}
+
+.posts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.post{
+    text-align: center;
+    font-size: 20px;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: brown;
+    height: 80px;
+}
+footer a{
+    text-decoration: none;
+    color: orange;
+}
+.footer-links{
+    display: flex;
+    gap: 5px;
 }

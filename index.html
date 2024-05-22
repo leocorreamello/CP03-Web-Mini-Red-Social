@@ -14,16 +14,18 @@
         <img src="img/favicon.ico" alt="">
         <h1>Mini Rede Social</h1>
     </header>
+    
     <main>
         <form>
+            <h1 style="text-align: center;">Faça o seu Post</h1> <br>
             <h3><span class="material-icons">edit</span> Digite seu post:</h3>
-            <input type="text" placeholder="O que você está pensando hoje?">
+            <input type="text" id="postUsuario" placeholder="O que você está pensando hoje?" style="height: 110px;" required>
             <h3><span class="material-icons">list</span> Categoria:</h3>
             <select name="categorias" id="categorias">
-                <option value="todos">Todos</option>
-                <option value="tecnologia">Notícias</option>
-                <option value="esportes">Dicas</option>
-                <option value="musica">Eventos</option>
+                <option value="Todos">Todos</option>
+                <option value="Notícias">Notícias</option>
+                <option value="Dicas">Dicas</option>
+                <option value="Eventos">Eventos</option>
             </select>
             <h3><span class="material-icons">image</span> Insira uma iamgem (URL):</h3>
             <input type="url" placeholder="Insira a url aqui">
@@ -31,18 +33,39 @@
             <input type="url" placeholder="Insira a url aqui">
             <h3><span class="material-icons">image</span> Insira uma iamgem (URL):</h3>
             <input type="url" placeholder="Insira a url aqui">
-            <button style="font-size: 18px;"><span class="material-symbols-outlined">campaign</span> Postar</button>
+            <button id="btnPostar" onclick="postar()" style="font-size: 18px;"><span class="material-symbols-outlined">campaign</span> Postar</button>
         </form>
         <div class="filtro-posts">
+            <h1>Feed</h1> <br>
             <h3>Filtrar por categoria:</h3>
             <select name="options" id="options">
-                <option value="option1">Todos</option>
-                <option value="option2">Notícias</option>
-                <option value="option3">Dicas</option>
-                <option value="option3">Eventos</option>
+                <option value="Todos">Todos</option>
+                <option value="Notícias">Notícias</option>
+                <option value="Dicas">Dicas</option>
+                <option value="Eventos">Eventos</option>
             </select>
         </div>
+        <div class="posts">
+            <div class="post">
+                <p id="feedPost" style="margin-top: 50px;"></p> <!--Post do usuário-->
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <p id="feedCategoria"></p> <!--categoria-->
+                <p id="feedData" style="margin-top: 20px;"></p> <!--data e hora-->
+            </div>
     </main>
+
+    <footer>
+        <div class="footer-text">
+            <p style="margin-top: 15px;">Desenvolvido por <strong>Leonardo Correa de Mello & Gabriel Alves Machado Vara</strong></p>
+        </div>
+        <div class="footer-links">
+            <a href="https://github.com/leocorreamello" target="_blank">GitHub - Leonardo</a>
+            <p style="color:  rgb(0, 0, 0); margin-left: 10px; margin-right: 10px;">|</p>
+            <a href="https://github.com/gabrielvara" target="_blank">GitHub - Gabriel</a>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
