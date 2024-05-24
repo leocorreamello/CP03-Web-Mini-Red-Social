@@ -1,26 +1,40 @@
-//Pega o botão de postar e adiciona um evento de click
 document.getElementById('btnPostar').addEventListener('click', function(postFeed) {
-
-    //Mostra o text do post no Feed
     postFeed.preventDefault();
     const postUsuario = document.getElementById('postUsuario').value;
-    document.getElementById('feedPost').innerText = postUsuario;
 
-    //Verifica se o campo de postagem está vazio
     if(postUsuario === ''){
-        //Mostra um alerta se o campo de text estiver vazio
         alert('Digite pelo menos um texto para postar!');
         return;
     }else{
-        //Mostra a categoria do post no Feed
         const categoriaSelecionada = document.querySelector('#categorias').value;
-        document.querySelector('#feedCategoria').innerText = `Categoria: ${categoriaSelecionada}`;
 
-        //Mostra a data e hora do post no Feed
         const agora = new Date();
         const dataFormatada = agora.toLocaleDateString('pt-BR');
         const horaFormatada = agora.toLocaleTimeString('pt-BR');
-        document.getElementById('feedData').innerText = `Data e Hora: ${dataFormatada + ' - ' + horaFormatada}`;
+
+        var postDiv = document.createElement('div');
+        postDiv.className = 'post';
+
+        var postP = document.createElement('p');
+        postP.id = 'feedPost';
+        postP.style.marginTop = '1px';
+        postP.innerText = postUsuario;
+        postDiv.appendChild(postP);
+
+        var categoriaP = document.createElement('p');
+        categoriaP.id = 'feedCategoria';
+        categoriaP.style.marginTop = '20px';
+        categoriaP.style.marginBottom = '10px';
+        categoriaP.innerText = `Categoria: ${categoriaSelecionada}`;
+        postDiv.appendChild(categoriaP);
+
+        var dataP = document.createElement('p');
+        dataP.id = 'feedData';
+        dataP.style.marginTop = '20px';
+        dataP.style.marginBottom = '20px';
+        dataP.innerText = `Data e Hora: ${dataFormatada + ' - ' + horaFormatada}`;
+        postDiv.appendChild(dataP);
+
+        document.querySelector('.posts').appendChild(postDiv);
     }
-    
 });
