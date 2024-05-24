@@ -97,6 +97,7 @@ footer{
     gap: 20px;
     background-color: brown;
     height: 80px;
+    margin-top: 10px;
 }
 footer a{
     text-decoration: none;
