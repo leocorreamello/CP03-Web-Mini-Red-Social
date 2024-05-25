@@ -10,6 +10,10 @@ document.getElementById('btnPostar').addEventListener('click', function(postFeed
     }else{
         //Pega a categoria selecionada
         const categoriaSelecionada = document.querySelector('#categorias').value;
+        const fotoUm = document.querySelector("#urlFoto1").value;
+        const fotoDois = document.querySelector("#urlFoto2").value;
+        const fotoTres = document.querySelector("#urlFoto3").value;
+        const fotos = [fotoUm, fotoDois, fotoTres];
 
         //Pega a data e hora atual
         const agora = new Date();
@@ -25,8 +29,40 @@ document.getElementById('btnPostar').addEventListener('click', function(postFeed
         const postP = document.createElement('p');
         postP.id = 'feedPost';
         postP.style.marginTop = '1px';
+        postP.style.marginBottom = '10px';
         postP.innerText = postUsuario;
         postDiv.appendChild(postP);
+
+        //Adiciona a imagem do post
+        if (fotos[0] !== '' || fotos[1] !== '' || fotos[2] !== '') {
+            const imagemPost = document.createElement('img');
+            imagemPost.src = fotos[0];
+            let indiceAtual = 0;
+            function proximaImagem() {
+                // Incrementa o índice atual
+                indiceAtual++;
+                if (indiceAtual >= fotos.length) {
+                    indiceAtual = 0;
+                }
+                // Atualiza a imagem do post
+                imagemPost.src = fotos[indiceAtual];
+            }
+            imagemPost.style.width = '100%';
+            imagemPost.style.height = 'auto';
+            postDiv.appendChild(imagemPost);
+        }
+
+        // Cria o botão
+        const botao = document.createElement('button');
+        botao.innerText = 'Próxima imagem';
+        botao.style.display = 'block'; // Faz o botão ocupar toda a linha
+        botao.style.margin = 'auto'; // Centraliza o botão na linha
+
+        // Adiciona um ouvinte de eventos ao botão para mudar a imagem quando for clicado
+        botao.addEventListener('click', proximaImagem);
+
+        // Adiciona o botão ao postDiv
+        postDiv.appendChild(botao);
 
         //Adiciona a categoria
         const categoriaP = document.createElement('p');
@@ -109,25 +145,8 @@ document.getElementById('btnPostar').addEventListener('click', function(postFeed
             }
         });
 
-        /* 
-        var imagens = [document.getElementById('urlFoto1').value, document.getElementById('urlFoto2').value, document.getElementById('urlFoto3').value];
-        var indiceAtual = 0;
-        document.getElementById('carouselImg').src = imagens[indiceAtual];
-        document.getElementById('prevBtn').addEventListener('click', function() {
-            indiceAtual--;
-            if (indiceAtual < 0) {
-                indiceAtual = imagens.length - 1;
-            }
-            document.getElementById('carouselImg').src = imagens[indiceAtual];
-        });
-        document.getElementById('nextBtn').addEventListener('click', function() {
-            indiceAtual++;
-            if (indiceAtual >= imagens.length) {
-                indiceAtual = 0;
-            }
-            document.getElementById('carouselImg').src = imagens[indiceAtual];
-        }); 
-        */
+        // Cria o carousel
+        
 
         //Adiciona o post criado acima ao feed
         document.querySelector('.posts').appendChild(postDiv);
@@ -135,5 +154,8 @@ document.getElementById('btnPostar').addEventListener('click', function(postFeed
         // Limpa os inputs
         document.getElementById('postUsuario').value = '';
         document.getElementById('categorias').value = 'Todos';
+        document.getElementById('urlFoto1').value = '';
+        document.getElementById('urlFoto2').value = '';
+        document.getElementById('urlFoto3').value = '';
     }
 });
