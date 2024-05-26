@@ -19,7 +19,7 @@
         <form>
             <h1 style="text-align: center;">Faça o seu Post</h1> <br>
             <h3><span class="material-icons">edit</span> Digite seu post:</h3>
-            <input type="text" id="postUsuario" placeholder="O que você está pensando hoje?" style="height: 110px;" required>
+            <input type="text" id="postUsuario" placeholder="O que você está pensando hoje?" autocomplete="off" style="height: 110px;" required>
             <h3><span class="material-icons">list</span> Categoria:</h3>
             <select name="categorias" id="categorias">
                 <option value="Todos">Todos</option>
@@ -28,11 +28,11 @@
                 <option value="Eventos">Eventos</option>
             </select>
             <h3><span class="material-icons">image</span> Insira uma iamgem (URL):</h3>
-            <input type="url" id="urlFoto1" placeholder="Insira a url aqui">
+            <input type="url" id="urlFoto1" placeholder="Insira a url aqui" autocomplete="off">
             <h3><span class="material-icons">image</span> Insira uma iamgem (URL):</h3>
-            <input type="url" id="urlFoto2" placeholder="Insira a url aqui">
+            <input type="url" id="urlFoto2" placeholder="Insira a url aqui" autocomplete="off">
             <h3><span class="material-icons">image</span> Insira uma iamgem (URL):</h3>
-            <input type="url" id="urlFoto3" placeholder="Insira a url aqui">
+            <input type="url" id="urlFoto3" placeholder="Insira a url aqui" autocomplete="off">
             <button id="btnPostar" style="font-size: 18px;"><span class="material-symbols-outlined">campaign</span> Postar</button>
         </form>
         <div class="filtro-posts">
@@ -48,18 +48,6 @@
         <div class="posts">
             <div class="post">
                 <p id="feedPost" style="margin-top: 10px;"></p> <!--Post do usuário-->
-                
-                <div class="carousel">
-                  <div class="carousel-inner">
-                      <div class="carousel-item active"><img src="img/150x150.png" alt="Imagem 1"></div>
-                      <div class="carousel-item"><img src="https://www.phooto.com.br/fotos/" alt="Imagem 2"></div>
-                      <div class="carousel-item"><img src="imagem3.jpg" alt="Imagem 3"></div>
-                      <!-- Adicione mais imagens conforme necessário -->
-                  </div>
-                  <button class="carousel-control prev" onclick="moveCarousel(-1)">&#10094;</button>
-                  <button class="carousel-control next" onclick="moveCarousel(1)">&#10095;</button>
-                </div>
-
                 <p id="feedCategoria"></p> <!--categoria-->
                 <p id="feedData" style="margin-top: 20px; margin-bottom: 10px;"></p> <!--data e hora-->
             </div>

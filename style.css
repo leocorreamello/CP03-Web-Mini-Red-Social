@@ -7,7 +7,7 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80px; /* Ajuste a altura conforme necessário */
+    height: 80px;
     background-color: brown;
     color: white;
     gap: 15px;
@@ -23,11 +23,11 @@ form{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 75vh; /* Ajuste a altura conforme necessário */
+    height: 75vh;
 }
 
 form h3, form input, form select{
-    width: 35%; /* Ajuste a largura conforme necessário */
+    width: 35%;
     text-align: left;
     margin-bottom: 8px;
 }
@@ -54,10 +54,10 @@ main button{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 10vh; /* Altura total da viewport */
-    width: 20%; /* Ajuste este valor para o comprimento desejado */
+    height: 10vh;
+    width: 20%;
     height: 30%;
-    margin: 0 auto; /* Centraliza a div se a largura for menor que 100% */
+    margin: 0 auto;
 }
 
 .filtro-posts select{
@@ -84,9 +84,9 @@ main button{
     font-size: 20px;
     text-align: center;
     font-size: 20px;
-    border-bottom: 2px solid black; /* Ajuste a cor e a espessura da linha conforme necessário */
-    width: 20%; /* Ajuste este valor para o comprimento desejado */
-    margin: 0 auto; /* Centraliza a div se a largura for menor que 100% */
+    border-bottom: 2px solid black;
+    width: 20%;
+    margin: 0 auto;
     margin-bottom: 20px;
 }
 
